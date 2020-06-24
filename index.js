@@ -32,7 +32,6 @@ module.exports = {
         ],
         '@typescript-eslint/triple-slash-reference': [
           'error',
-          'always',
           {
             path: 'never',
             types: 'prefer-import',
@@ -74,10 +73,7 @@ module.exports = {
       },
     },
     {
-      files: [
-        '*.config.js',
-        '*-config.js',
-      ],
+      files: ['*.config.js', '*-config.js'],
       env: {
         node: true,
       },
@@ -104,6 +100,6 @@ module.exports = {
           { devDependencies: true },
         ],
       },
-    }
+    },
   ],
 };
