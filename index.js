@@ -1,4 +1,4 @@
-const extendsBase = ['airbnb-base', 'eslint:recommended', 'prettier'];
+const extendsBase = ['airbnb-base', 'prettier'];
 
 module.exports = {
   plugins: ['@typescript-eslint'],
@@ -20,8 +20,25 @@ module.exports = {
         'prettier/@typescript-eslint',
       ],
       rules: {
-        // allow triple slash for typescript references
-        'spaced-comment': ['error', 'always', { markers: ['/'] }],
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            ts: 'never',
+            tsx: 'never',
+            js: 'always',
+            jsx: 'always',
+          },
+        ],
+        '@typescript-eslint/triple-slash-reference': [
+          'error',
+          'always',
+          {
+            path: 'never',
+            types: 'prefer-import',
+            lib: 'always',
+          },
+        ],
         '@typescript-eslint/explicit-member-accessibility': [
           'error',
           {
@@ -33,8 +50,25 @@ module.exports = {
       },
     },
     {
+      files: ['*.js', '*.jsx'],
+      extends: [...extendsBase, 'eslint:recommended'],
+      rules: {
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            ts: 'always',
+            tsx: 'always',
+            js: 'never',
+            jsx: 'never',
+          },
+        ],
+        'import/prefer-default-export': 'off',
+      },
+    },
+    {
       files: ['*.ts', '*.js', '*.tsx', '*.jsx'],
-      extends: extendsBase,
+      // extends: extendsBase,
       rules: {
         'import/prefer-default-export': 'off',
       },
@@ -43,21 +77,9 @@ module.exports = {
       files: [
         '*.config.js',
         '*-config.js',
-        '__tests__/**/*.test.ts',
-        'stories/**/*.ts',
-        'jest-environment/*.js',
-        '__mocks__/**/*.ts',
       ],
-      extends: extendsBase,
-      globals: {
-        page: false,
-        browser: false,
-        context: true,
-        jestPuppeteer: true,
-      },
       env: {
         node: true,
-        jest: true,
       },
       rules: {
         'import/no-extraneous-dependencies': [
@@ -66,5 +88,22 @@ module.exports = {
         ],
       },
     },
+    {
+      files: [
+        'jest*.config.js',
+        '__tests__/**/*.test.ts',
+        'jest-environment/*.js',
+        '__mocks__/**/*.ts',
+      ],
+      env: {
+        jest: true,
+      },
+      rules: {
+        'import/no-extraneous-dependencies': [
+          'error',
+          { devDependencies: true },
+        ],
+      },
+    }
   ],
 };
