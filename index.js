@@ -1,14 +1,20 @@
 const extendsBase = ['airbnb-base', 'prettier'];
 
 module.exports = {
-  plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
   settings: {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
       },
     },
+    // 'import/no-extraneous-dependencies': [
+    //   'error',
+    //   {
+    //     devDependencies: true,
+    //   },
+    // ],
   },
   overrides: [
     {
