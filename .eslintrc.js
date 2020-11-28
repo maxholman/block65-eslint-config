@@ -1,3 +1,3 @@
 module.exports = {
-  extends: './index.js',
+  extends: require.resolve('./index.js'),
 };
