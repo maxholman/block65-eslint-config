@@ -38,7 +38,13 @@ module.exports = {
       },
     },
     {
-      files: ['*.config.js', '*-config.js', '*.config.ts', '*-config.ts'],
+      files: [
+        '*.config.js',
+        '*-config.js',
+        '*.config.ts',
+        '*-config.ts',
+        'bin/*.js',
+      ],
       env: {
         node: true,
       },
