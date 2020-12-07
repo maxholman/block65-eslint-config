@@ -5,20 +5,61 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
   },
+
+  // plugins: ['import'],
+
   overrides: [
+    // rules for javascript files only
     {
-      files: ['*.ts', '*.js', '*.tsx', '*.jsx'],
-      extends: ['plugin:prettier/recommended', 'prettier'],
+      files: ['*.js', '*.jsx'],
+      extends: ['airbnb/base', 'plugin:prettier/recommended', 'prettier'],
     },
+
+    // rules for typescript files only
+    {
+      files: ['*.ts', '*.tsx'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
+      extends: [
+        'airbnb-typescript/base',
+        'plugin:prettier/recommended',
+        'prettier/@typescript-eslint',
+      ],
+
+      // this is not necessarily needed, but it's being overridden somewhere
+      // TODO: find out where/why
+      settings: {
+        'import/resolver': {
+          node: {
+            extensions: ['.js', '.jsx', '.json', '.ts', '.tsx', '.d.ts'],
+          },
+        },
+      },
+    },
+
+    // Overrides for any generic TS or JS eslint rules
     {
       files: ['*.ts', '*.js', '*.tsx', '*.jsx'],
-      extends: ['plugin:prettier/recommended', 'prettier/@typescript-eslint'],
       rules: {
-        'import/prefer-default-export': ['off'],
         'no-param-reassign': [
           'error',
           { ignorePropertyModificationsFor: ['el'] },
         ],
+      },
+    },
+
+    // Overrides for any TS or JS import plugin rules
+    {
+      files: ['*.ts', '*.js', '*.tsx', '*.jsx'],
+      rules: {
+        'import/prefer-default-export': ['off'],
+      },
+    },
+
+    // Overrides for any Typescript eslint rules
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
         '@typescript-eslint/triple-slash-reference': [
           'error',
           {
@@ -37,6 +78,8 @@ module.exports = {
         ],
       },
     },
+
+    // Overrides only for config and bin js files
     {
       files: [
         '*.config.js',
@@ -55,6 +98,8 @@ module.exports = {
         ],
       },
     },
+
+    // Overrides only for jest
     {
       files: [
         'jest*.config.js',

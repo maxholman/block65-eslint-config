@@ -54,11 +54,17 @@ describe('welp', () => {
 
   test('react/storybook', async () => {
     const result = await fixtureLinter('react/component.stories.tsx');
+
     expect(result.errorCount).toBe(0);
   });
 
-  test('random', async () => {
+  test('random TS', async () => {
     const result = await fixtureLinter('random.ts');
+    expect(result.errorCount).toBe(0);
+  });
+
+  test('random JS', async () => {
+    const result = await fixtureLinter('just-random.js');
     expect(result.errorCount).toBe(0);
   });
 

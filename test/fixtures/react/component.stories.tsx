@@ -3,7 +3,7 @@ import * as React from 'react';
 import { RandomComponent } from './component';
 
 // eslint-disable-next-line react/jsx-props-no-spreading
-const Template: Story = (args) => <RandomComponent {...args} />;
+const Template: Story = (args) => <RandomComponent name="random" {...args} />;
 
 export const Primary = Template.bind({});
 
