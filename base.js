@@ -86,7 +86,8 @@ module.exports = {
         '*-config.js',
         '*.config.ts',
         '*-config.ts',
-        'bin/*.js',
+        'bin/**/*.js',
+        'bin/**/*.ts',
       ],
       env: {
         node: true,
@@ -105,7 +106,6 @@ module.exports = {
         'jest*.config.js',
         '*.test.ts',
         'jest-environment/*.js',
-        '__mocks__/**/*.ts',
         '__mocks__/**/*.ts',
       ],
       env: {
