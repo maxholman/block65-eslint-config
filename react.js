@@ -18,6 +18,9 @@ module.exports = {
     {
       files: ['*.jsx', '*.tsx'],
       rules: {
+        // React 17 is mandated
+        'react/react-in-jsx-scope': 'off',
+
         'react/jsx-curly-brace-presence': [
           'warn',
           { props: 'never', children: 'never' },
