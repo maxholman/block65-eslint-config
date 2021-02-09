@@ -6,7 +6,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@storybook/react": "^6.1.16",
+    "@storybook/react": "^6.1.17",
     "react": "^17.0.1"
   },
   "devDependencies": {
@@ -14,12 +14,12 @@
     "@types/eslint": "^7.2.6",
     "@types/jest": "^26.0.20",
     "@types/react": "^17.0.1",
-    "@typescript-eslint/eslint-plugin": "^4.14.2",
-    "@typescript-eslint/parser": "^4.14.2",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
     "babel-loader": "^8.2.2",
     "eslint": "^7.19.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^7.2.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-plugin-formatjs": "^2.12.0",
