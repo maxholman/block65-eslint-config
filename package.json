@@ -1,6 +1,6 @@
 {
   "name": "@block65/eslint-config",
-  "version": "3.2.2",
+  "version": "4.0.0",
   "license": "MIT",
   "main": "new-vanilla.js",
   "files": [
