@@ -2,11 +2,7 @@ const { overrides, ...rest } = require('./base.js');
 
 module.exports = {
   ...rest,
-  extends: [
-    'plugin:react-hooks/recommended',
-    'plugin:react/recommended',
-    'prettier/react',
-  ],
+  extends: ['plugin:react-hooks/recommended', 'plugin:react/recommended'],
   plugins: ['formatjs'],
   settings: {
     react: {
