@@ -20,11 +20,7 @@ module.exports = {
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint'],
-      extends: [
-        'airbnb-typescript/base',
-        'plugin:prettier/recommended',
-        'prettier/@typescript-eslint',
-      ],
+      extends: ['airbnb-typescript/base', 'plugin:prettier/recommended'],
 
       // this is not necessarily needed, but it's being overridden somewhere
       // TODO: find out where/why
