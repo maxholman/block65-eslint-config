@@ -2,7 +2,7 @@
   "name": "@block65/eslint-config",
   "version": "4.0.0",
   "license": "MIT",
-  "main": "new-vanilla.js",
+  "main": "index.js",
   "files": [
     "base.js",
     "index.js",
@@ -13,32 +13,32 @@
   "dependencies": {
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-airbnb-typescript": "^12.3.1",
-    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-node": "^0.3.4"
   },
   "devDependencies": {
-    "@types/eslint": "^7.2.7",
-    "@types/node": "^14.14.33",
-    "@typescript-eslint/eslint-plugin": "^4.17.0",
-    "@typescript-eslint/parser": "^4.17.0",
-    "eslint": "^7.21.0",
-    "eslint-plugin-formatjs": "^2.12.7",
+    "@types/eslint": "^7.2.10",
+    "@types/node": "^15.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "eslint": "^7.26.0",
+    "eslint-plugin-formatjs": "^2.15.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.3.0"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.17.0",
-    "eslint": "^7.21.0",
-    "eslint-plugin-formatjs": "^2.12.7",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "eslint": "^7.26.0",
+    "eslint-plugin-formatjs": "^2.15.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.2.1",
-    "typescript": "^4.2.3"
+    "prettier": "^2.3.0",
+    "typescript": "^4.2.4"
   }
 }
