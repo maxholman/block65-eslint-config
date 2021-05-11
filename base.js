@@ -77,14 +77,7 @@ module.exports = {
 
     // Overrides only for config and bin js files
     {
-      files: [
-        '*.config.js',
-        '*-config.js',
-        '*.config.ts',
-        '*-config.ts',
-        'bin/**/*.js',
-        'bin/**/*.ts',
-      ],
+      files: ['*.config.js', '*-config.js', '*.config.ts', '*-config.ts'],
       env: {
         node: true,
       },
