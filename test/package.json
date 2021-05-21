@@ -9,6 +9,9 @@
     "@storybook/react": "^6.3.0-alpha.24",
     "react": "^17.0.2"
   },
+  "resolutions": {
+    "postcss": "8"
+  },
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@types/eslint": "^7.2.11",
