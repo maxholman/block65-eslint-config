@@ -11,7 +11,7 @@ module.exports = {
   overrides: [
     // rules for javascript files only
     {
-      files: ['*.js', '*.jsx'],
+      files: ['*.cjs', '*.js', '*.jsx'],
       extends: ['airbnb/base', 'plugin:prettier/recommended', 'prettier'],
     },
 
@@ -22,20 +22,20 @@ module.exports = {
       plugins: ['@typescript-eslint'],
       extends: ['airbnb-typescript/base', 'plugin:prettier/recommended'],
 
-      // this is not necessarily needed, but it's being overridden somewhere
-      // TODO: find out where/why
-      settings: {
-        'import/resolver': {
-          node: {
-            extensions: ['.js', '.jsx', '.json', '.ts', '.tsx', '.d.ts'],
-          },
-        },
-      },
+      // // this is not necessarily needed, but it's being overridden somewhere
+      // // TODO: find out where/why
+      // settings: {
+      //   'import/resolver': {
+      //     node: {
+      //       extensions: ['.js', '.json'],
+      //     },
+      //   },
+      // },
     },
 
     // Overrides for any generic TS or JS eslint rules
     {
-      files: ['*.ts', '*.js', '*.tsx', '*.jsx'],
+      files: ['*.ts', '*.cjs', '*.js', '*.tsx', '*.jsx'],
       rules: {
         'no-param-reassign': [
           'error',
@@ -46,9 +46,19 @@ module.exports = {
 
     // Overrides for any TS or JS import plugin rules
     {
-      files: ['*.ts', '*.js', '*.tsx', '*.jsx'],
+      files: ['*.ts', '*.cjs', '*.js', '*.tsx', '*.jsx'],
       rules: {
         'import/prefer-default-export': ['off'],
+        'import/no-unresolved': 2,
+        'import/extensions': [2, 'ignorePackages'],
+      },
+    },
+
+    // Disallow common js
+    {
+      files: ['*.ts', '*.js', '*.tsx', '*.jsx'],
+      rules: {
+        'import/no-commonjs': 2,
       },
     },
 
@@ -77,7 +87,14 @@ module.exports = {
 
     // Overrides only for config and bin js files
     {
-      files: ['*.config.js', '*-config.js', '*.config.ts', '*-config.ts'],
+      files: [
+        '*.config.js',
+        '*-config.js',
+        '*.config.cjs',
+        '*-config.cjs',
+        '*.config.ts',
+        '*-config.ts',
+      ],
       env: {
         node: true,
       },
@@ -93,6 +110,7 @@ module.exports = {
     {
       files: [
         'jest*.config.js',
+        'jest*.config.cjs',
         '*.test.ts',
         'jest-environment/*.js',
         '__mocks__/**/*.ts',
