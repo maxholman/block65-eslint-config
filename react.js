@@ -1,7 +1,7 @@
-const { overrides, ...rest } = require('./base.js');
+const base = require('./base.js');
 
 module.exports = {
-  ...rest,
+  ...base,
   extends: ['plugin:react-hooks/recommended', 'plugin:react/recommended'],
   plugins: ['formatjs'],
   settings: {
@@ -10,11 +10,12 @@ module.exports = {
     },
   },
   overrides: [
-    ...overrides,
+    ...base.overrides,
     {
       files: ['*.jsx', '*.tsx'],
       rules: {
         // React 17 is mandated
+        'react/jsx-uses-react': 'off',
         'react/react-in-jsx-scope': 'off',
 
         'react/jsx-curly-brace-presence': [
