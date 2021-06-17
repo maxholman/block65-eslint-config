@@ -42,33 +42,50 @@ describe('Basic', () => {
 
   test('react/test0', async () => {
     const result = await fixtureLinter('react/test0.tsx');
-    expect(result.errorCount).toBe(0);
+    expect(result.messages).toMatchInlineSnapshot(`Array []`);
   });
 
   test('react/component', async () => {
     const result = await fixtureLinter('react/component.tsx');
     // expect(result).toBe(null);
-    expect(result.errorCount).toBe(0);
+    expect(result.messages).toMatchInlineSnapshot(`Array []`);
   });
 
   test('react/storybook', async () => {
     const result = await fixtureLinter('react/component.stories.tsx');
-
-    expect(result.errorCount).toBe(0);
+    expect(result.messages).toMatchInlineSnapshot(`Array []`);
   });
 
   test('random TS', async () => {
     const result = await fixtureLinter('random.ts');
-    expect(result.errorCount).toBe(0);
+    expect(result.messages).toMatchInlineSnapshot(`Array []`);
   });
 
   test('random JS', async () => {
     const result = await fixtureLinter('just-random.js');
-    expect(result.errorCount).toBe(0);
+    expect(result.messages).toMatchInlineSnapshot(`Array []`);
   });
 
   test('config.js', async () => {
     const result = await fixtureLinter('this.is.a.config.cjs');
-    expect(result.errorCount).toBe(0);
+    expect(result.messages).toMatchInlineSnapshot(`Array []`);
+  });
+
+  test('import/no-unresolved.js', async () => {
+    const result = await fixtureLinter('import/no-unresolved.js');
+    expect(result.messages).toMatchInlineSnapshot(`
+Array [
+  Object {
+    "column": 8,
+    "endColumn": 27,
+    "endLine": 1,
+    "line": 1,
+    "message": "Unable to resolve path to module './missing-file.js'.",
+    "nodeType": "Literal",
+    "ruleId": "import/no-unresolved",
+    "severity": 2,
+  },
+]
+`);
   });
 });

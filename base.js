@@ -13,6 +13,7 @@ module.exports = {
     {
       files: ['*.cjs', '*.js', '*.jsx'],
       extends: ['airbnb/base', 'plugin:prettier/recommended', 'prettier'],
+      rules: { 'import/no-unresolved': 2 },
     },
 
     // rules for typescript files only
@@ -49,7 +50,6 @@ module.exports = {
       files: ['*.ts', '*.cjs', '*.js', '*.tsx', '*.jsx'],
       rules: {
         'import/prefer-default-export': ['off'],
-        'import/no-unresolved': 2,
         'import/extensions': [2, 'ignorePackages'],
       },
     },
@@ -58,7 +58,7 @@ module.exports = {
     {
       files: ['*.ts', '*.js', '*.tsx', '*.jsx'],
       rules: {
-        'import/no-commonjs': 2,
+        'import/no-commonjs': [2],
       },
     },
 
