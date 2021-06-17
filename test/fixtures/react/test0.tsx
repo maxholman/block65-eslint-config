@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link, RandomComponent } from './component';
+import { Link, RandomComponent } from './component.js';
 
 const someProps = {
   name: 'lol',

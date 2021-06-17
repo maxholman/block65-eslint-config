@@ -1,7 +1,6 @@
 import { ESLint } from 'eslint';
 import { promises } from 'fs';
 import * as path from 'path';
-import * as util from 'util';
 
 function createFixtureLinter(eslint: ESLint, fixturesBase: string) {
   return async (
@@ -18,7 +17,7 @@ function createFixtureLinter(eslint: ESLint, fixturesBase: string) {
   };
 }
 
-describe('welp', () => {
+describe('Basic', () => {
   const eslint = new ESLint({
     useEslintrc: true,
     cwd: path.resolve(__dirname, '..'),
@@ -69,7 +68,7 @@ describe('welp', () => {
   });
 
   test('config.js', async () => {
-    const result = await fixtureLinter('this.is.a.config.js');
+    const result = await fixtureLinter('this.is.a.config.cjs');
     expect(result.errorCount).toBe(0);
   });
 });

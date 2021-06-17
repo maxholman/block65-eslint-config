@@ -1,3 +1,3 @@
 const test = 'hello';
 
-module.exports = { test };
+export default { test };
