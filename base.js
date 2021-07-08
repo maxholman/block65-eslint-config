@@ -106,18 +106,19 @@ module.exports = {
       },
     },
 
-    // Overrides only for jest
+    // Overrides only for test runners and supporting files
     {
       files: [
+        'ava.config.js',
         'jest*.config.js',
         'jest*.config.cjs',
         '*.test.ts',
         'jest-environment/*.js',
         '__mocks__/**/*.ts',
       ],
-      env: {
-        jest: true,
-      },
+      // env: {
+      //   jest: true,
+      // },
       rules: {
         'import/no-extraneous-dependencies': [
           'error',
