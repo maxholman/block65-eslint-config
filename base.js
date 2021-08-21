@@ -12,7 +12,7 @@ module.exports = {
     // rules for javascript files only
     {
       files: ['*.cjs', '*.js', '*.jsx'],
-      extends: ['airbnb/base', 'plugin:prettier/recommended', 'prettier'],
+      extends: ['airbnb-base', 'plugin:prettier/recommended', 'prettier'],
       rules: { 'import/no-unresolved': 2 },
     },
 
