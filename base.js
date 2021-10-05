@@ -116,9 +116,9 @@ module.exports = {
         'jest-environment/*.js',
         '__mocks__/**/*.ts',
       ],
-      // env: {
-      //   jest: true,
-      // },
+      env: {
+        node: true,
+      },
       rules: {
         'import/no-extraneous-dependencies': [
           'error',
