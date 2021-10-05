@@ -36,6 +36,21 @@ module.exports = {
             exceptions: [],
           },
         ],
+
+        // for css specificity, ensure css is included before any other imports
+        'import/order': [
+          'error',
+          {
+            pathGroups: [
+              {
+                pattern: './*.scss',
+                group: 'parent',
+                patternOptions: { matchBase: true },
+                position: 'before',
+              },
+            ],
+          },
+        ],
       },
     },
     {
