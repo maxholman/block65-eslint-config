@@ -94,6 +94,7 @@ module.exports = {
         '*-config.cjs',
         '*.config.ts',
         '*-config.ts',
+        '.eslintrc.cjs',
       ],
       env: {
         node: true,
