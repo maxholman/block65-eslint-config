@@ -20,6 +20,9 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
+      parserOptions: {
+        allowAutomaticSingleRunInference: true,
+      },
       plugins: ['@typescript-eslint'],
       extends: ['airbnb-typescript/base', 'plugin:prettier/recommended'],
 
