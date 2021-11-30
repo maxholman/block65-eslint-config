@@ -1,49 +1,14 @@
 {
-  "name": "@block65/eslint-config",
-  "version": "6.2.2",
-  "license": "MIT",
-  "main": "index.js",
-  "files": [
-    "base.js",
-    "index.js",
-    "react.js",
-    "prettier.config.js",
-    "README.md"
-  ],
-  "scripts": {
-    "test": "cd test; yarn test"
-  },
-  "dependencies": {
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-airbnb-typescript": "^14.0.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-import-resolver-node": "^0.3.6"
+  "name": "eslint-config",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "git@github.com:block65/eslint-config.git",
+  "workspaces": {
+    "packages": [
+      "./packages/*"
+    ]
   },
   "devDependencies": {
-    "@types/eslint": "^7.28.2",
-    "@types/node": "^16.11.6",
-    "@typescript-eslint/eslint-plugin": "^5.3.0",
-    "@typescript-eslint/parser": "^5.3.0",
-    "eslint": "^8.1.0",
-    "eslint-plugin-formatjs": "^2.18.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": ">=4.2.1-alpha-5cccacd13-20211101",
-    "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
-  },
-  "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.3.0",
-    "@typescript-eslint/parser": "^5.3.0",
-    "eslint": "^8.1.0",
-    "eslint-plugin-formatjs": "^2.18.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": ">=4.2.1-alpha-5cccacd13-20211101",
-    "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
+    "lerna": "^4.0.0"
   }
 }
