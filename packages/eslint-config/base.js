@@ -1,17 +1,17 @@
 module.exports = {
-  env: {
-    es6: true,
-  },
-  parserOptions: {
-    ecmaVersion: 2018,
-  },
+  // env: {
+  //   es6: true,
+  // },
+  // parserOptions: {
+  //   ecmaVersion: 2018,
+  // },
 
   // plugins: ['import'],
 
   overrides: [
     // rules for javascript files only
     {
-      files: ['*.cjs', '*.js', '*.jsx'],
+      files: ['*.cjs', '*.mjs', '*.js', '*.jsx'],
       extends: ['airbnb-base', 'plugin:prettier/recommended', 'prettier'],
       rules: { 'import/no-unresolved': 2 },
     },
@@ -24,7 +24,11 @@ module.exports = {
         allowAutomaticSingleRunInference: true,
       },
       plugins: ['@typescript-eslint'],
-      extends: ['airbnb-typescript/base', 'plugin:prettier/recommended'],
+      extends: [
+        'airbnb-base',
+        'airbnb-typescript/base',
+        'plugin:prettier/recommended',
+      ],
 
       // // this is not necessarily needed, but it's being overridden somewhere
       // // TODO: find out where/why
@@ -39,7 +43,7 @@ module.exports = {
 
     // Overrides for any generic TS or JS eslint rules
     {
-      files: ['*.ts', '*.cjs', '*.js', '*.tsx', '*.jsx'],
+      files: ['*.ts', '*.cjs', '*.mjs', '*.js', '*.tsx', '*.jsx'],
       rules: {
         'no-param-reassign': [
           'error',
@@ -112,14 +116,7 @@ module.exports = {
 
     // Overrides only for test runners and supporting files
     {
-      files: [
-        'ava.config.js',
-        'jest*.config.js',
-        'jest*.config.cjs',
-        '*.test.ts',
-        'jest-environment/*.js',
-        '__mocks__/**/*.ts',
-      ],
+      files: ['*.test.ts', 'jest-environment/*.js', '__mocks__/**/*.ts'],
       env: {
         node: true,
       },
