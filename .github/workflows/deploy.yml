@@ -29,6 +29,6 @@ jobs:
           CI: true
 
       - name: publish
-        run: lerna exec -- npm publish
+        run: lerna exec -- npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
