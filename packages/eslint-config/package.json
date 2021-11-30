@@ -1,6 +1,6 @@
 {
   "name": "@block65/eslint-config",
-  "version": "7.0.3",
+  "version": "7.0.4",
   "license": "MIT",
   "exports": {
     ".": "./index.js",
