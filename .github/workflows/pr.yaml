@@ -1,0 +1,14 @@
+name: Unit Tests (PR)
+
+on:
+  pull_request:
+    branches: ['master']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: yarn test
+        env:
+          CI: true
