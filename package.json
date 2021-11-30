@@ -1,12 +1,14 @@
 {
-  "name": "eslint-config",
-  "version": "1.0.0",
   "private": true,
   "repository": "git@github.com:block65/eslint-config.git",
   "workspaces": {
     "packages": [
       "./packages/*"
     ]
+  },
+  "scripts": {
+    "clean": "lerna clean",
+    "test": "lerna run test --stream"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
