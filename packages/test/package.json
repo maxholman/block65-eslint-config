@@ -1,10 +1,11 @@
 {
-  "name": "test",
+  "name": "@block65/eslint-config-test",
   "version": "7.0.2",
+  "type": "module",
+  "files": [],
   "scripts": {
     "test": "jest"
   },
-  "type": "module",
   "dependencies": {
     "@block65/eslint-config": "^7.0.2",
     "@storybook/react": "^6.4.1",
