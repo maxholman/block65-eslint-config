@@ -26,6 +26,6 @@ jobs:
           CI: true
 
       - name: publish
-        run: yarn lerna publish --access=public
+        run: yarn lerna publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
