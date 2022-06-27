@@ -31,7 +31,28 @@ describe('Basic', () => {
 
   test('random JS', async () => {
     const result = await fixtureLinter('just-random.js');
-    expect(result.messages).toMatchInlineSnapshot(`Array []`);
+    expect(result.messages).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "column": 15,
+          "endColumn": 22,
+          "endLine": 4,
+          "fix": Object {
+            "range": Array [
+              72,
+              79,
+            ],
+            "text": "'hello'",
+          },
+          "line": 4,
+          "message": "Strings must use singlequote.",
+          "messageId": "wrongQuotes",
+          "nodeType": "TemplateLiteral",
+          "ruleId": "quotes",
+          "severity": 2,
+        },
+      ]
+    `);
   });
 
   test('config.js', async () => {

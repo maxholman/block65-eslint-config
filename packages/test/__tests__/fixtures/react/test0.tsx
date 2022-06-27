@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Link, RandomComponent } from './component.js';
 
 const someProps = {
@@ -8,7 +7,7 @@ const someProps = {
 export default (
   <>
     <RandomComponent {...someProps} />
-    <Link url={new URL(window.location.href)} className="storybook-button">
+    <Link url={new URL(window.location.href)} className="button">
       Woo
     </Link>
   </>

@@ -1,22 +1,19 @@
-import * as React from 'react';
 import {
   AnchorHTMLAttributes,
   FC,
   HTMLAttributes,
   useEffect,
   useRef,
-  useState,
+  useState
 } from 'react';
 
 export const Link: FC<
   AnchorHTMLAttributes<HTMLAnchorElement> & { url: URL }
-> = ({ url, children, ...props }) => {
-  return (
-    <a {...props} href={url.toString()}>
-      {children}
-    </a>
-  );
-};
+> = ({ url, children, ...props }) => (
+  <a {...props} href={url.toString()}>
+    {children}
+  </a>
+);
 
 export const RandomComponent: FC<
   HTMLAttributes<HTMLHeadingElement> & { name: string }
