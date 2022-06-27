@@ -58,6 +58,16 @@ module.exports = {
       rules: {
         'import/prefer-default-export': ['off'],
         'import/extensions': [2, 'ignorePackages'],
+        'import/order': [
+          'error',
+          {
+            groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
+            'newlines-between': 'never',
+            alphabetize: {
+              order: 'asc',
+            },
+          },
+        ],
       },
     },
 
