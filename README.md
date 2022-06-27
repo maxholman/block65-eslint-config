@@ -17,17 +17,17 @@ $ npx install-peerdeps --dev @block65/eslint-config
 
 ### Usage
 
-Add the following to `module.exports` in `.eslintrc.js` or `eslintConfig` in `package.json`
+Add the following to `module.exports` in `.eslintrc.cjs` or `eslintConfig` in `package.json`
 
 ```json
 "extends": [
-  "@block65/eslint-config"
+  "@block65"
 ]
 ```
-Add the following to your `module.exports` in `prettier.config.js` or `prettier` in `package.json`
+Add the following to your `module.exports` in `prettier.config.mjs` or `prettier` in `package.json`
 
 ```json
-"@block65/eslint-config/prettier.config"
+"@block65/eslint-config/prettier"
 ```
 
 For more details on ESLint shareable configs, read the [shareable configs docs][shareable].
