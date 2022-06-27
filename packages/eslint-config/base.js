@@ -15,11 +15,10 @@ module.exports = {
     // rules for javascript files only
     {
       files: ['*.cjs', '*.mjs', '*.js', '*.jsx'],
-      extends: ['airbnb-base', 'plugin:prettier/recommended', 'prettier'],
-      rules: { 'import/no-unresolved': 2 },
+      extends: ['airbnb-base', 'prettier'],
     },
 
-    // rules for typescript files only
+    // TYPESCRIPT files ONLY
     {
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
@@ -29,9 +28,12 @@ module.exports = {
       },
       plugins: ['@typescript-eslint'],
       extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'airbnb-base',
         'airbnb-typescript/base',
-        'plugin:prettier/recommended',
+        'plugin:import/typescript',
+        'prettier',
       ],
 
       // // this is not necessarily needed, but it's being overridden somewhere
