@@ -1,6 +1,6 @@
 {
   "name": "@block65/eslint-config-test",
-  "version": "7.0.4",
+  "version": "8.0.0",
   "license": "MIT",
   "type": "module",
   "files": [],
@@ -9,7 +9,7 @@
     "test:watch": "jest --watchAll"
   },
   "dependencies": {
-    "@block65/eslint-config": "^7.0.4",
+    "@block65/eslint-config": "^8.0.0",
     "react": "^18.2.0"
   },
   "devDependencies": {
