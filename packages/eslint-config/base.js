@@ -1,11 +1,5 @@
+/** @type {import('eslint').BaseConfig} */
 module.exports = {
-  // env: {
-  //   es6: true,
-  // },
-  // parserOptions: {
-  //   ecmaVersion: 2018,
-  // },
-
   parserOptions: {
     ecmaVersion: 2022, // so it doesn't barf on things like import.meta.url
     sourceType: 'module',
