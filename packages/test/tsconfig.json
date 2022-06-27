@@ -3,5 +3,6 @@
     "target": "es2022",
     "noEmit": true,
     "moduleResolution": "nodenext"
-  }
+  },
+  "include": ["__tests__"]
 }
