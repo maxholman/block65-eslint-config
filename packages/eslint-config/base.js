@@ -49,6 +49,7 @@ module.exports = {
           'error',
           { ignorePropertyModificationsFor: ['el'] },
         ],
+        quotes: [`error`, 'single', { avoidEscape: true }],
       },
     },
 
