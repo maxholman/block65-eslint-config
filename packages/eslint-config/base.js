@@ -29,16 +29,6 @@ module.exports = {
         'plugin:import/typescript',
         'prettier',
       ],
-
-      // // this is not necessarily needed, but it's being overridden somewhere
-      // // TODO: find out where/why
-      // settings: {
-      //   'import/resolver': {
-      //     node: {
-      //       extensions: ['.js', '.json'],
-      //     },
-      //   },
-      // },
     },
 
     // Overrides for any generic TS or JS eslint rules
