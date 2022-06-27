@@ -6,7 +6,10 @@ module.exports = {
   //   ecmaVersion: 2018,
   // },
 
-  // plugins: ['import'],
+  parserOptions: {
+    ecmaVersion: 2022, // so it doesn't barf on things like import.meta.url
+    sourceType: 'module',
+  },
 
   overrides: [
     // rules for javascript files only
@@ -21,6 +24,7 @@ module.exports = {
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
+        ecmaVersion: 2022, // so it doesn't barf on things like import.meta.url
         allowAutomaticSingleRunInference: true,
       },
       plugins: ['@typescript-eslint'],
