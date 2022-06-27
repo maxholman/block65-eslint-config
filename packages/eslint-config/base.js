@@ -127,5 +127,19 @@ module.exports = {
         ],
       },
     },
+
+    // allows dev dependencies in devops and infra dirs
+    {
+      files: ['**/devops/**/*.ts', '**/infra/**/*.ts'],
+      env: {
+        node: true,
+      },
+      rules: {
+        'import/no-extraneous-dependencies': [
+          'error',
+          { devDependencies: true },
+        ],
+      },
+    },
   ],
 };
