@@ -2,7 +2,11 @@ const base = require('./base.js');
 
 module.exports = {
   ...base,
-  extends: ['plugin:react-hooks/recommended', 'plugin:react/recommended'],
+  extends: [
+    'plugin:react-hooks/recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+  ],
   plugins: ['formatjs'],
   settings: {
     react: {
@@ -10,13 +14,10 @@ module.exports = {
     },
   },
   overrides: [
+    ...base.overrides,
     {
       files: ['*.jsx', '*.tsx'],
       rules: {
-        // React 17 is mandated
-        'react/jsx-uses-react': 'off',
-        'react/react-in-jsx-scope': 'off',
-
         'react/jsx-curly-brace-presence': [
           'warn',
           { props: 'never', children: 'never' },
@@ -89,6 +90,5 @@ module.exports = {
         'jsx-a11y/anchor-is-valid': 0,
       },
     },
-    ...base.overrides,
   ],
 };
