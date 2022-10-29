@@ -1,22 +1,22 @@
-const base = require('./base.js');
+const { allJsWildcards, allTsWildcards } = require('./common.js');
 
 module.exports = {
-  ...base,
-  extends: [
-    'plugin:react-hooks/recommended',
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-  ],
-  plugins: ['formatjs'],
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
   overrides: [
-    ...base.overrides,
     {
-      files: ['*.jsx', '*.tsx'],
+      files: [...allJsWildcards, ...allTsWildcards],
+
+      extends: [
+        'plugin:react-hooks/recommended',
+        'plugin:react/recommended',
+        'plugin:react/jsx-runtime',
+      ],
+
+      settings: {
+        react: {
+          version: 'detect',
+        },
+      },
+
       rules: {
         'react/jsx-curly-brace-presence': [
           'warn',
@@ -24,7 +24,7 @@ module.exports = {
         ],
 
         // no need with typescript
-        'react/prop-types': ['off'],
+        'react/prop-types': 'off',
 
         // no need with typescript
         'react/jsx-props-no-spreading': [
@@ -36,40 +36,15 @@ module.exports = {
             exceptions: [],
           },
         ],
+      },
+    },
 
-        // for css specificity, ensure css is included before any other imports
-        'import/order': [
-          'error',
-          {
-            pathGroups: [
-              {
-                pattern: './*.scss',
-                group: 'parent',
-                patternOptions: { matchBase: true },
-                position: 'before',
-              },
-            ],
-          },
-        ],
-      },
-    },
+    // FormatJS / react-intl
     {
-      files: ['*.stories.ts', '*.stories.tsx'],
-      rules: {
-        'react/jsx-props-no-spreading': [
-          'error',
-          {
-            exceptions: ['Template'],
-          },
-        ],
-        'import/no-extraneous-dependencies': [
-          'error',
-          { devDependencies: true },
-        ],
-      },
-    },
-    {
-      files: ['*.js', '*.ts', '*.jsx', '*.tsx'],
+      files: [...allJsWildcards, ...allTsWildcards],
+
+      plugins: ['formatjs'],
+
       rules: {
         // Recommended defaults - see https://formatjs.io/docs/tooling/linter/
         'formatjs/enforce-description': ['error', 'literal'],
@@ -87,7 +62,7 @@ module.exports = {
         ],
 
         // typescript pretty much takes care of this
-        'jsx-a11y/anchor-is-valid': 0,
+        // 'jsx-a11y/anchor-is-valid': 0,
       },
     },
   ],

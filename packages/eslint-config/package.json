@@ -5,6 +5,7 @@
   "exports": {
     ".": "./index.js",
     "./react": "./react.js",
+    "./typescript": "./typescript.js",
     "./prettier": "./prettier.config.js",
     "./prettier.config.js": "./prettier.config.js"
   },
@@ -13,57 +14,51 @@
     "base.js",
     "index.js",
     "react.js",
-    "prettier.config.js",
-    "README.md",
-    "LICENSE.md"
+    "typescript.js",
+    "prettier.config.js"
   ],
   "dependencies": {
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-node": "^0.3.6",
-    "eslint-import-resolver-typescript": "^3.1.1"
+    "eslint-import-resolver-typescript": "^3.5.2"
   },
   "devDependencies": {
-    "@types/eslint": "^8.4.3",
-    "@types/node": "^18.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.29.0",
-    "@typescript-eslint/parser": "^5.29.0",
-    "eslint": "^8.18.0",
-    "eslint-plugin-formatjs": "^4.0.1",
+    "@types/eslint": "^8.4.8",
+    "@types/node": "^18.11.5",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "eslint": "^8.26.0",
+    "eslint-plugin-formatjs": "^4.3.4",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.0",
-    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": ">=4.6.0",
+    "eslint-plugin-unicorn": "^44.0.2",
     "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.4"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.29.0",
-    "@typescript-eslint/parser": "^5.29.0",
-    "eslint": "^8.18.0",
-    "eslint-plugin-formatjs": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "eslint": "^8.26.0",
+    "eslint-plugin-formatjs": "^4.3.4",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.0",
-    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": ">=4.6.0",
     "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.4"
   },
   "peerDependenciesMeta": {
     "eslint-plugin-formatjs": {
-      "optional": true
-    },
-    "eslint-plugin-jsx-a11y": {
       "optional": true
     },
     "eslint-plugin-react": {
       "optional": true
     },
     "eslint-plugin-react-hooks": {
-      "optional": true
-    },
-    "typescript": {
       "optional": true
     }
   }
