@@ -30,6 +30,9 @@ module.exports = {
       'single',
       { avoidEscape: true, allowTemplateLiterals: false },
     ],
+
+    // 'unicorn/prefer-node-protocol': 'error',
+    // 'unicorn/better-regex': 'error',
   },
 
   esmRules: {

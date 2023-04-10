@@ -1,17 +1,12 @@
 {
   "private": true,
   "repository": "git@github.com:block65/eslint-config.git",
-  "workspaces": {
-    "packages": [
-      "./packages/*"
-    ]
-  },
   "scripts": {
     "clean": "lerna clean",
     "test": "lerna run test --stream",
     "test:watch": "lerna run test:watch --stream"
   },
   "devDependencies": {
-    "lerna": "^6.0.1"
+    "lerna": "^6.6.1"
   }
 }

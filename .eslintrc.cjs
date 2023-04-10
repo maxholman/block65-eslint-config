@@ -3,7 +3,7 @@
  */
 module.exports = {
   root: true,
-  extends: './packages/eslint-config',
+  extends: './packages/eslint-config/javascript.js',
 
   // parserOptions: {
   //   tsconfigRootDir: __dirname,

@@ -4,6 +4,8 @@ const { allJsRules, esmRules, allJsWildcards } = require('./common.js');
 module.exports = {
   overrides: [
     {
+      files: [...allJsWildcards],
+
       env: {
         es2022: true,
       },
@@ -13,14 +15,11 @@ module.exports = {
         sourceType: 'module',
       },
 
-      files: [...allJsWildcards],
-      plugins: ['import', 'unicorn'],
+      plugins: ['import' /* , 'unicorn' */],
       extends: [
-        'airbnb-base',
+        'airbnb',
         'plugin:import/recommended',
-
-        'plugin:unicorn/recommended',
-
+        // 'plugin:unicorn/recommended',
         // NOTE: this is eslint-config-prettier which turns OFF rules
         'prettier',
       ],
@@ -28,9 +27,6 @@ module.exports = {
       rules: {
         ...allJsRules,
         ...esmRules,
-
-        'unicorn/prefer-node-protocol': 'error',
-        'unicorn/better-regex': 'error',
       },
     },
 
@@ -59,13 +55,12 @@ module.exports = {
         node: true,
       },
       rules: {
-        // console is fine for nodejs-ish config files
         'no-console': 'off',
 
         'import/no-extraneous-dependencies': [
           'error',
           {
-            devDependencies: true,
+            devDependencies: false,
           },
         ],
       },

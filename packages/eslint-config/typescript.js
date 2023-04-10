@@ -6,10 +6,26 @@ module.exports = {
     {
       files: [...allTsWildcards],
 
+      env: {
+        es2022: true,
+      },
+
+      parser: '@typescript-eslint/parser',
+
       parserOptions: {
         ecmaVersion: 2022, // so it doesn't barf on things like import.meta.url
         sourceType: 'module',
       },
+
+      plugins: ['@typescript-eslint', 'import' /* , 'unicorn' */],
+      extends: [
+        'airbnb-base',
+        'airbnb-typescript/base',
+        'plugin:import/recommended',
+        // 'plugin:unicorn/recommended',
+        // NOTE: this is eslint-config-prettier which turns OFF rules
+        'prettier',
+      ],
 
       settings: {
         //  See also https://github.com/import-js/eslint-import-resolver-typescript#configuration
@@ -23,17 +39,6 @@ module.exports = {
           // node: true,
         },
       },
-
-      parser: '@typescript-eslint/parser',
-      plugins: ['@typescript-eslint'],
-      extends: [
-        'airbnb-typescript',
-        // 'plugin:import/recommended',
-        // 'plugin:@typescript-eslint/recommended',
-        // 'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        // NOTE: this is eslint-config-prettier which turns OFF rules
-        'prettier',
-      ],
 
       rules: {
         ...allJsRules,
