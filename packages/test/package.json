@@ -4,10 +4,6 @@
   "license": "MIT",
   "type": "module",
   "files": [],
-  "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watchAll"
-  },
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
