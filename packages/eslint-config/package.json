@@ -1,6 +1,6 @@
 {
   "name": "@block65/eslint-config",
-  "version": "9.0.0-alpha.0",
+  "version": "9.0.0",
   "license": "MIT",
   "type": "module",
   "exports": {
