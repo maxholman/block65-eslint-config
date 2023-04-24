@@ -3,19 +3,8 @@
  */
 module.exports = {
   root: true,
-  extends: './packages/eslint-config/javascript.js',
+  extends: './packages/eslint-config/javascript.cjs',
 
-  // parserOptions: {
-  //   tsconfigRootDir: __dirname,
-  //   project: ['./tsconfig-eslint.json'],
-  // },
-
-  overrides: [
-    {
-      files: ['*.js'],
-      rules: {
-        'import/no-commonjs': 'off',
-      },
-    },
-  ],
+  // right now, we have 2 packages and they both have their own eslint config
+  ignorePatterns: ['packages/**/*'],
 };

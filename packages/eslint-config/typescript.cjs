@@ -1,4 +1,4 @@
-const { allJsRules, esmRules, allTsWildcards } = require('./common.js');
+const { allJsRules, esmRules, allTsWildcards } = require('./common.cjs');
 
 /** @type {import('eslint').BaseConfig} */
 module.exports = {

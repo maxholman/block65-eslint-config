@@ -2,6 +2,7 @@ module.exports = {
   root: true,
   extends: ['@block65/eslint-config/typescript'],
   parserOptions: {
-    project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json'],
   },
 };

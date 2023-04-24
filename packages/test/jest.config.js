@@ -5,5 +5,4 @@ export default {
     '^(\\..*)\\.jsx?$': '$1',
   },
   extensionsToTreatAsEsm: ['.ts'],
-
 };

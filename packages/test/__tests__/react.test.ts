@@ -16,13 +16,12 @@ describe('React', () => {
 
   test('test0', async () => {
     const result = await fixtureLinter('test0.tsx');
-    expect(result.messages).toMatchInlineSnapshot(`Array []`);
+    expect(result.messages).toMatchInlineSnapshot(`[]`);
   });
 
   test('component', async () => {
     const result = await fixtureLinter('component.tsx');
     // expect(result).toBe(null);
-    expect(result.messages).toMatchInlineSnapshot(`Array []`);
+    expect(result.messages).toMatchInlineSnapshot(`[]`);
   });
-
 });

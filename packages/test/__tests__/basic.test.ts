@@ -32,13 +32,13 @@ describe('Basic', () => {
   test('random JS', async () => {
     const result = await fixtureLinter('just-random.js');
     expect(result.messages).toMatchInlineSnapshot(`
-      Array [
-        Object {
+      [
+        {
           "column": 15,
           "endColumn": 22,
           "endLine": 4,
-          "fix": Object {
-            "range": Array [
+          "fix": {
+            "range": [
               72,
               79,
             ],
@@ -57,14 +57,14 @@ describe('Basic', () => {
 
   test('config.js', async () => {
     const result = await fixtureLinter('this.is.a.config.cjs');
-    expect(result.messages).toMatchInlineSnapshot(`Array []`);
+    expect(result.messages).toMatchInlineSnapshot(`[]`);
   });
 
   test('import/no-unresolved.js', async () => {
     const result = await fixtureLinter('no-unresolved.js');
     expect(result.messages).toMatchInlineSnapshot(`
-      Array [
-        Object {
+      [
+        {
           "column": 8,
           "endColumn": 27,
           "endLine": 1,
@@ -81,8 +81,8 @@ describe('Basic', () => {
   test('import/no-cycle', async () => {
     const result = await fixtureLinter('cyclic-a.js');
     expect(result.messages).toMatchInlineSnapshot(`
-      Array [
-        Object {
+      [
+        {
           "column": 1,
           "endColumn": 36,
           "endLine": 1,

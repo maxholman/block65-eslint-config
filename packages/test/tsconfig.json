@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2022",
     "noEmit": true,
-    "moduleResolution": "nodenext"
+    "moduleResolution": "node16"
   },
   "include": ["__tests__"]
 }

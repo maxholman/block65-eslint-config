@@ -1,7 +1,5 @@
-
 [![npm](https://img.shields.io/npm/v/@block65/eslint-config.svg)](https://www.npmjs.com/package/@block65/eslint-config)
 [![npm](https://img.shields.io/npm/l/@block65/eslint-config.svg)](https://github.com/block65/eslint-config/blob/master/LICENSE)
-
 
 ## Block65 ESLint config with Prettier
 
@@ -24,6 +22,7 @@ Add the following to `module.exports` in `.eslintrc.cjs` or `eslintConfig` in `p
   "@block65"
 ]
 ```
+
 Add the following to your `module.exports` in `prettier.config.mjs` or `prettier` in `package.json`
 
 ```json
@@ -37,5 +36,3 @@ For more details on ESLint shareable configs, read the [shareable configs docs][
 ### License
 
 MIT
-
-

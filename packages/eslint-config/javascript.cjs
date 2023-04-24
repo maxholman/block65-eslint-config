@@ -1,4 +1,4 @@
-const { allJsRules, esmRules, allJsWildcards } = require('./common.js');
+const { allJsRules, esmRules, allJsWildcards } = require('./common.cjs');
 
 /** @type {import('eslint').BaseConfig} */
 module.exports = {
@@ -60,7 +60,7 @@ module.exports = {
         'import/no-extraneous-dependencies': [
           'error',
           {
-            devDependencies: false,
+            devDependencies: true,
           },
         ],
       },

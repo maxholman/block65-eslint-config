@@ -2,4 +2,4 @@
 src
 *.js
 *.json
-!prettier.config.js
+!prettier.config.cjs

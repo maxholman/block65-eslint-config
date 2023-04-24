@@ -1,10 +1,10 @@
 import {
-  AnchorHTMLAttributes,
-  FC,
-  HTMLAttributes,
+  type AnchorHTMLAttributes,
+  type FC,
+  type HTMLAttributes,
   useEffect,
   useRef,
-  useState
+  useState,
 } from 'react';
 
 export const Link: FC<

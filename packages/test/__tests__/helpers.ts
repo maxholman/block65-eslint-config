@@ -1,14 +1,14 @@
+import { readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
 import { ESLint } from 'eslint';
-import { promises } from 'fs';
-import * as path from 'path';
 
 export function createFixtureLinter(eslint: ESLint, fixturesBase: string) {
   return async (
     fileName: string,
     options?: { warnIgnored?: boolean },
   ): Promise<ESLint.LintResult> => {
-    const fixturePath = path.resolve(fixturesBase, fileName);
-    const code = (await promises.readFile(fixturePath)).toString();
+    const fixturePath = resolve(fixturesBase, fileName);
+    const code = (await readFile(fixturePath)).toString();
     const [result] = await eslint.lintText(code, {
       ...options,
       filePath: fixturePath,

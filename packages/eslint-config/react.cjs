@@ -3,7 +3,7 @@ const {
   allTsWildcards,
   allJsRules,
   esmRules,
-} = require('./common.js');
+} = require('./common.cjs');
 
 module.exports = {
   env: {
