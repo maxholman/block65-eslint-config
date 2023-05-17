@@ -50,6 +50,8 @@ module.exports = {
         '*.test.ts',
         'jest-*.js',
         '__mocks__/**/*.ts',
+
+        '**/infra/cdk/**',
       ],
       env: {
         node: true,
