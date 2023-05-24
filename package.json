@@ -2,6 +2,7 @@
   "type": "module",
   "devDependencies": {
     "@block65/eslint-config": "workspace:^",
+    "@changesets/cli": "^2.26.1",
     "@types/eslint": "^8.40.0",
     "@types/node": "^20.2.3",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
