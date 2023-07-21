@@ -2,4 +2,4 @@
 '@block65/eslint-config': major
 ---
 
-bump deps
+Major dependency updates - prettier v3 and typescript eslint major
