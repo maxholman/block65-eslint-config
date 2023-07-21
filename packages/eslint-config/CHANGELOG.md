@@ -1,5 +1,11 @@
 # @block65/eslint-config
 
+## 11.0.0
+
+### Major Changes
+
+- e93e12e: Deps update
+
 ## 10.0.0
 
 ### Major Changes
